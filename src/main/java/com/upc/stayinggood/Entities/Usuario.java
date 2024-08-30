@@ -1,7 +1,9 @@
 package com.upc.stayinggood.Entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.LinkedHashSet;
@@ -9,6 +11,8 @@ import java.util.Set;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -27,5 +31,4 @@ public class Usuario {
 
     @OneToMany(mappedBy = "idUsuario")
     private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();
-
 }
