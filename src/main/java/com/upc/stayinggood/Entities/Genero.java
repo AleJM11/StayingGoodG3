@@ -1,6 +1,7 @@
 package com.upc.stayinggood.Entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
