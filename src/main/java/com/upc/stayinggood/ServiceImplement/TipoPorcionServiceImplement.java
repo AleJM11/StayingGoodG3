@@ -20,6 +20,7 @@ public class TipoPorcionServiceImplement implements TipoPorcionService {
 
     @Override
     public TipoPorcion insertarTipoPorcion(TipoPorcion tipoPorcion) {
+
         return tipoPorcionRepositorio.save(tipoPorcion);
     }
 }
