@@ -36,7 +36,7 @@ public class Alimento {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_nombre_porcion", nullable = false)
-    private TipoPorcion idNombrePorcion;
+    private TipoPorcion tipoPorcion;
 
     @OneToMany(mappedBy = "alimento")
     private Set<RegistroConsumo> registroConsumos = new LinkedHashSet<>();

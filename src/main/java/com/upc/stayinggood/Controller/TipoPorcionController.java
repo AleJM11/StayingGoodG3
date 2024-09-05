@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/apii")
+@RequestMapping("/api")
 public class TipoPorcionController {
     @Autowired
     private TipoPorcionService tipoPorcionService;
