@@ -22,4 +22,18 @@ public class AlimentoServiceImplement implements AlimentoService {
         alimentoRepositorio.save(alimento);
     }
 
+    @Override
+    public Alimento actualizarAlimento(Alimento alimento) {
+        if(alimentoRepositorio.findById(alimento.getId()).isPresent())
+            return alimentoRepositorio.save(alimento);
+        return null;
+    }
+
+    @Override
+    public void eliminarAlimento(Integer idAlimento) {
+        if(alimentoRepositorio.findById(idAlimento).isPresent()){
+            alimentoRepositorio.deleteById(idAlimento);
+        }
+    }
+
 }
