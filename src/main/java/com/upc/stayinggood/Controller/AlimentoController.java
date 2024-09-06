@@ -15,12 +15,14 @@ public class AlimentoController {
     private AlimentoService alimentoService;
 
     @PostMapping("/alimento")
-    public Alimento insertarAlimento(@RequestBody Alimento alimento) {
-        return alimentoService.insertarAlimento(alimento);
+    public void insertarAlimento(@RequestBody Alimento alimento) {
+        alimentoService.insertarAlimento(alimento);
     }
 
     @GetMapping("/alimento")
     public List<Alimento> obtenerAlimento() {
         return alimentoService.obtenerAlimentos();
     }
+
+
 }

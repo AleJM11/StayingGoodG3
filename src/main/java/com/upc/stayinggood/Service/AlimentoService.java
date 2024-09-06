@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface AlimentoService {
     public List<Alimento> obtenerAlimentos();
-    public Alimento insertarAlimento(Alimento alimento);
+    public void insertarAlimento(Alimento alimento);
 }
