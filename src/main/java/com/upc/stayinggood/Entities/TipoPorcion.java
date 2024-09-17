@@ -20,10 +20,11 @@ public class TipoPorcion {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "nombre_porcion", nullable = false, length = Integer.MAX_VALUE)
+    @Column(name = "nombre_porcion", nullable = false,
+            length = Integer.MAX_VALUE)
     private String nombrePorcion;
 
     //@OneToMany(mappedBy = "idNombrePorcion")
     //private Set<Alimento> alimentos = new LinkedHashSet<>();
-
 }
+

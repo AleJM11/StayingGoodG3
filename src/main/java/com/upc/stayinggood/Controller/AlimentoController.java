@@ -36,6 +36,7 @@ public class AlimentoController {
 
     @DeleteMapping("/alimento/{id}")
     public void eliminarAlimento(@PathVariable Integer id) {
+
         alimentoService.eliminarAlimento(id);
     }
 

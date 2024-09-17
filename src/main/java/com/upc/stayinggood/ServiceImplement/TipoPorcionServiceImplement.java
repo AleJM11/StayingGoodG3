@@ -15,6 +15,7 @@ public class TipoPorcionServiceImplement implements TipoPorcionService {
 
     @Override
     public List<TipoPorcion> obtenerTipoPorcion() {
+
         return tipoPorcionRepositorio.findAll();
     }
 
