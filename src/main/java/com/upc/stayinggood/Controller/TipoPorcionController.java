@@ -1,8 +1,10 @@
 package com.upc.stayinggood.Controller;
 
+import com.upc.stayinggood.DTOs.TipoPorcionDTO;
 import com.upc.stayinggood.Entities.TipoPorcion;
 import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.TipoPorcionService;
+import org.modelmapper.ModelMapper;
 import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -10,15 +12,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/apii")
+@RequestMapping("/api")
 public class TipoPorcionController {
     @Autowired
     private TipoPorcionService tipoPorcionService;
 
-    @PostMapping("/tipoPorcion")
+    /*@PostMapping("/tipoPorcion")
     public TipoPorcion insertarTipoPorcion(@RequestBody TipoPorcion tipoPorcion) {
         return tipoPorcionService.insertarTipoPorcion(tipoPorcion);
+    }*/
+
+    @PostMapping("/tipoPorcion")
+    public TipoPorcionDTO insertarTipoPorcion(@RequestBody TipoPorcionDTO tipoPorcionDTO){
+        ModelMapper modelMapper = new ModelMapper();
+        TipoPorcion tipoPorcion = modelMapper.map(tipoPorcionDTO, TipoPorcion.class);
+        tipoPorcionService.insertarTipoPorcion(tipoPorcion);
+        tipoPorcionDTO = modelMapper.map(tipoPorcion, TipoPorcionDTO.class);
+        return tipoPorcionDTO;
     }
+
 
     @GetMapping("/tipoPorciones")
     public List<TipoPorcion> obtenerTipoPorcion() {

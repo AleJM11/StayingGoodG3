@@ -19,9 +19,9 @@ public class RegistroConsumo {
     @Column(name = "cantidad", nullable = false)
     private Integer cantidad;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "alimento_id", nullable = false)
-    private Alimento alimento;
+    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    //@JoinColumn(name = "alimento_id", nullable = false)
+    //private Alimento alimento;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_perfilfisico", nullable = false)
