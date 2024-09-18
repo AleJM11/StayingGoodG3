@@ -17,6 +17,7 @@ import java.util.Set;
 @Table(name = "actividad_fisica")
 public class ActividadFisica {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -26,7 +27,7 @@ public class ActividadFisica {
     @Column(name = "factor_actividad", nullable = false)
     private Double factorActividad;
 
-    @OneToMany(mappedBy = "idActividadfisica")
-    private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();
+    //@OneToMany(mappedBy = "idActividadfisica")
+    //private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();
 
 }

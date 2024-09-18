@@ -14,31 +14,19 @@ public class PerfilFisicoServiceImplement implements PerfilFisicoService {
     private PerfilFisicoRepositorio perfilFisicoRepositorio;
 
     @Override
-    public PerfilFisico buscarPerfilFisico(Integer idPerfilFisico) {
-        return null;
-    }
-
-    @Override
     public List<PerfilFisico> obtenerPerfilFisico() {
-        return null;
+        return perfilFisicoRepositorio.findAll();
     }
 
     @Override
-    public PerfilFisico insertarPerfilFisico(PerfilFisico perfilFisico) {
-        return perfilFisicoRepositorio.save(perfilFisico);
+    public void insertarPerfilFisico(PerfilFisico perfilFisico) {
+        perfilFisicoRepositorio.save(perfilFisico);
     }
 
-    @Override
-    public PerfilFisico actualizarPerfilFisico(PerfilFisico perfilFisico) {
-        if(perfilFisicoRepositorio.findById(perfilFisico.getId()).isPresent())
-            return perfilFisicoRepositorio.save(perfilFisico);
-        return null;
-    }
-
-    @Override
+    /*@Override
     public void eliminarPerfilFisico(Integer idPerfilFisico) {
         if(perfilFisicoRepositorio.findById(idPerfilFisico).isPresent()){
             perfilFisicoRepositorio.deleteById(idPerfilFisico);
         }
-    }
+    }*/
 }

@@ -23,6 +23,7 @@ public class AlimentoController {
 
     @GetMapping("/alimento")
     public List<Alimento> obtenerAlimento() {
+
         return alimentoService.obtenerAlimentos();
     }
 

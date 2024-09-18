@@ -17,6 +17,7 @@ import java.util.Set;
 @Table(name = "usuario")
 public class Usuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -29,6 +30,6 @@ public class Usuario {
     @Column(name = "contrasena", nullable = false, length = Integer.MAX_VALUE)
     private String contrasena;
 
-    @OneToMany(mappedBy = "idUsuario")
-    private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();
+    /*@OneToMany(mappedBy = "usuario")
+    private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();*/
 }

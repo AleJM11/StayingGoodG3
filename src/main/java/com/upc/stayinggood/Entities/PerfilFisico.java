@@ -17,6 +17,7 @@ import java.util.Set;
 @Table(name = "perfil_fisico")
 public class PerfilFisico {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
@@ -29,22 +30,26 @@ public class PerfilFisico {
     @Column(name = "peso", nullable = false)
     private Double peso;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_usuario", nullable = false)
-    private Usuario idUsuario;
+    @ManyToOne
+    @JoinColumn(name = "id_nombre")
+    private Usuario usuario;
+    //private Usuario idUsuario;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_actividadfisica", nullable = false)
-    private ActividadFisica idActividadfisica;
+    @ManyToOne
+    @JoinColumn(name = "id_descripcion")
+    private ActividadFisica actividadFisica;
+    //private ActividadFisica idActividadfisica;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_genero", nullable = false)
-    private Genero idGenero;
+    //@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne
+    @JoinColumn(name = "id_nombre_genero")
+    private Genero genero;
+    //private Genero idGenero;
 
-    @OneToMany(mappedBy = "idPerfilfisico")
-    private Set<CalculoMacro> calculoMacros = new LinkedHashSet<>();
+    //@OneToMany(mappedBy = "idPerfilfisico")
+    //private Set<CalculoMacro> calculoMacros = new LinkedHashSet<>();
 
-    @OneToMany(mappedBy = "idPerfilfisico")
-    private Set<RegistroConsumo> registroConsumos = new LinkedHashSet<>();
+    //@OneToMany(mappedBy = "idPerfilfisico")
+    //private Set<RegistroConsumo> registroConsumos = new LinkedHashSet<>();
 
 }

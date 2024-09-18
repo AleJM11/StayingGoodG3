@@ -16,23 +16,24 @@ public class PerfilFisicoController {
     private PerfilFisicoService perfilFisicoService;
 
     @PostMapping("/perfilFisico")
-    public PerfilFisico insertarPerfilFisico(@RequestBody PerfilFisico perfilFisico) {
-        return perfilFisicoService.insertarPerfilFisico(perfilFisico);
+    public void insertarPerfilFisico(@RequestBody PerfilFisico perfilFisico) {
+        perfilFisicoService.insertarPerfilFisico(perfilFisico);
     }
 
     @GetMapping("/perfilFisico")
     public List<PerfilFisico> obtenerPerfilFisico() {
+
         return perfilFisicoService.obtenerPerfilFisico();
     }
 
-    @PutMapping("/perfilFisico")
+    /*@PutMapping("/perfilFisico")
     public PerfilFisico actualizarPerfilFisico(@RequestBody PerfilFisico perfilFisico) {
         perfilFisicoService.actualizarPerfilFisico(perfilFisico);
         return perfilFisicoService.actualizarPerfilFisico(perfilFisico);
-    }
+    }*/
 
-    @DeleteMapping("/perfilFisico/{id}")
+    /*@DeleteMapping("/perfilFisico/{id}")
     public void eliminarPerfilFisico(@PathVariable Integer id) {
         perfilFisicoService.eliminarPerfilFisico(id);
-    }
+    }*/
 }
