@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "calculo_macros")
-public class CalculoMacro {
+public class CalculoMacro { //esta entidad se va a eliminar porque su resultado se puede desarrollar con un querie
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;

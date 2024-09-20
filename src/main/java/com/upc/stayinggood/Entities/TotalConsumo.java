@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "total_consumo")
-public class TotalConsumo {
+public class TotalConsumo { ////esta entidad se va a eliminar
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;
