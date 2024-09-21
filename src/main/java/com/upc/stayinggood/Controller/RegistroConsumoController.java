@@ -5,6 +5,7 @@ import com.upc.stayinggood.Entities.RegistroConsumo;
 import com.upc.stayinggood.Service.RegistroConsumoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class RegistroConsumoController {
     private RegistroConsumoService registroConsumoService;
 
     @PostMapping("/InsertarRegistro")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public RegistroConsumoDTO insertarRegistroConsumo(@RequestBody RegistroConsumoDTO registroConsumoDTO) {
         ModelMapper modelMapper = new ModelMapper();
         RegistroConsumo registroConsumo = modelMapper.map(registroConsumoDTO, RegistroConsumo.class);
@@ -25,6 +27,7 @@ public class RegistroConsumoController {
     }
 
     @PutMapping("/ModificarRegistroConsumo")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public RegistroConsumoDTO actualizarRegistroConsumo(@RequestBody RegistroConsumoDTO registroConsumoDTO) {
         ModelMapper modelMapper = new ModelMapper();
         RegistroConsumo registroConsumo = modelMapper.map(registroConsumoDTO, RegistroConsumo.class);

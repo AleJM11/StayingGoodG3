@@ -10,4 +10,7 @@ public interface UsuarioService {
     public Usuario insertarUsuario(Usuario usuario);
     public Usuario actualizarUsuario(Usuario usuario);
     public void eliminarUsuario(Integer idUsuario);
+    public Integer insertUserRol(Long user_id, Long rol_id);
+
+
 }

@@ -7,6 +7,7 @@ import com.upc.stayinggood.Service.TipoPorcionService;
 import org.modelmapper.ModelMapper;
 import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class TipoPorcionController {
     }*/
 
     @PostMapping("/tipoPorcion")
+    @PreAuthorize("hasRole('ADMIN')")
     public TipoPorcionDTO insertarTipoPorcion(@RequestBody TipoPorcionDTO tipoPorcionDTO){
         ModelMapper modelMapper = new ModelMapper();
         TipoPorcion tipoPorcion = modelMapper.map(tipoPorcionDTO, TipoPorcion.class);
@@ -33,6 +35,7 @@ public class TipoPorcionController {
 
 
     @GetMapping("/tipoPorciones")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<TipoPorcion> obtenerTipoPorcion() {
         return tipoPorcionService.obtenerTipoPorcion();
     }

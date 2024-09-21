@@ -6,6 +6,7 @@ import com.upc.stayinggood.Entities.Genero;
 import com.upc.stayinggood.Service.AlimentoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,11 +18,13 @@ public class AlimentoController {
     private AlimentoService alimentoService;
 
     @PostMapping("/alimento")
+    @PreAuthorize("hasRole('ADMIN')")
     public void insertarAlimento(@RequestBody Alimento alimento) {
         alimentoService.insertarAlimento(alimento);
     }
 
     @GetMapping("/alimento")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<Alimento> obtenerAlimento() {
 
         return alimentoService.obtenerAlimentos();

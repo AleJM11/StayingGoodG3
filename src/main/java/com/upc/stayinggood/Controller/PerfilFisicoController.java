@@ -5,6 +5,7 @@ import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.ActividadFisicaService;
 import com.upc.stayinggood.Service.PerfilFisicoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,11 +17,13 @@ public class PerfilFisicoController {
     private PerfilFisicoService perfilFisicoService;
 
     @PostMapping("/perfilFisico")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public void insertarPerfilFisico(@RequestBody PerfilFisico perfilFisico) {
         perfilFisicoService.insertarPerfilFisico(perfilFisico);
     }
 
     @GetMapping("/perfilFisico")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<PerfilFisico> obtenerPerfilFisico() {
 
         return perfilFisicoService.obtenerPerfilFisico();

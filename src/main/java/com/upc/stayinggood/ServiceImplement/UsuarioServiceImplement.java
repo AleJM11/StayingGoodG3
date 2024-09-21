@@ -5,6 +5,7 @@ import com.upc.stayinggood.Repositorie.UsuarioRepositorio;
 import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class UsuarioServiceImplement implements UsuarioService {
     }
 
     @Override
+    @Transactional
     public Usuario insertarUsuario(Usuario usuario) {
         return usuarioRepositorio.save(usuario);
     }
@@ -39,5 +41,11 @@ public class UsuarioServiceImplement implements UsuarioService {
         if(usuarioRepositorio.findById(idUsuario).isPresent()){
             usuarioRepositorio.deleteById(idUsuario);
         }
+    }
+
+    public Integer insertUserRol(Long user_id, Long rol_id) {
+        Integer result = 0;
+        usuarioRepositorio.insertUserRol(user_id, rol_id);
+        return 1;
     }
 }
