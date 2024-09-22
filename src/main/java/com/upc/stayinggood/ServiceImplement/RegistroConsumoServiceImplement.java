@@ -1,5 +1,6 @@
 package com.upc.stayinggood.ServiceImplement;
 
+import com.upc.stayinggood.DTOs.ConsumoCaloriasDTO;
 import com.upc.stayinggood.Entities.RegistroConsumo;
 import com.upc.stayinggood.Repositorie.RegistroConsumoRepositorio;
 import com.upc.stayinggood.Service.RegistroConsumoService;
@@ -30,4 +31,10 @@ public class RegistroConsumoServiceImplement implements RegistroConsumoService {
             return registroConsumoRepositorio.save(registroConsumo);
         return null;
     }
+
+    /*
+    @Override
+    public List<ConsumoCaloriasDTO> totalConsumo() {
+        return registroConsumoRepositorio.totalConsumo();
+    }*/
 }

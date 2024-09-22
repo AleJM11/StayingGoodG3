@@ -24,12 +24,12 @@ public class RegistroConsumo {
 
     //@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @ManyToOne
-    @JoinColumn(name = "alimento_id", nullable = false)
+    @JoinColumn(name = "alimento_id")
     private Alimento alimento;
 
     @ManyToOne
-    @JoinColumn(name = "id_perfilfisico", nullable = false)
-    private PerfilFisico idPerfilfisico;
+    @JoinColumn(name = "perfilfisico_id")
+    private PerfilFisico perfilfisico;
 
     /*@OneToMany(mappedBy = "idRegistro")
     private Set<TotalConsumo> totalConsumos = new LinkedHashSet<>();*/
