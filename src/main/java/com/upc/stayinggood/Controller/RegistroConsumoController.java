@@ -43,10 +43,10 @@ public class RegistroConsumoController {
         return registroConsumoService.obtenerRegistroConsumo();
     }
 
-    /*
+
     @GetMapping("/ConsultaConsumoCalorias")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<ConsumoCaloriasDTO> totalConsumo() {
         return registroConsumoService.totalConsumo();
-    }*/
+    }
 }

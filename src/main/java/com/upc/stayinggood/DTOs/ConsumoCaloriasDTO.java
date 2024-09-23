@@ -7,13 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigInteger;
+
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ConsumoCaloriasDTO {
-    private Integer id;
-    private Integer consumoCalorias;
-    private PerfilFisico perfilFisico;
-    private Alimento alimento;
+    private Integer id_perfilFisico;
+    private Long consumoTotalCalorias;
+    //private PerfilFisico perfilFisico;
+    //private Alimento alimento;
 }

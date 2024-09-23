@@ -9,5 +9,5 @@ public interface RegistroConsumoService {
     public List<RegistroConsumo> obtenerRegistroConsumo();
     public RegistroConsumo insertarRegistroConsumo(RegistroConsumo registroConsumo);
     public RegistroConsumo actualizarRegistroConsumo(RegistroConsumo registroConsumo);
-    //public List<ConsumoCaloriasDTO> totalConsumo();
+    public List<ConsumoCaloriasDTO> totalConsumo();
 }

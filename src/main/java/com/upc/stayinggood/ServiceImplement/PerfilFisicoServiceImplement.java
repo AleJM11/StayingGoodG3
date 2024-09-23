@@ -1,5 +1,6 @@
 package com.upc.stayinggood.ServiceImplement;
 
+import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
 import com.upc.stayinggood.Repositorie.PerfilFisicoRepositorio;
 import com.upc.stayinggood.Service.PerfilFisicoService;
@@ -21,6 +22,11 @@ public class PerfilFisicoServiceImplement implements PerfilFisicoService {
     @Override
     public void insertarPerfilFisico(PerfilFisico perfilFisico) {
         perfilFisicoRepositorio.save(perfilFisico);
+    }
+
+    @Override
+    public List<UsuariosPorGeneroDTO> usuariosPorGenero() {
+        return perfilFisicoRepositorio.usuariosPorGenero();
     }
 
     /*@Override

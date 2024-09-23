@@ -1,5 +1,6 @@
 package com.upc.stayinggood.Controller;
 
+import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
 import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.ActividadFisicaService;
@@ -27,6 +28,13 @@ public class PerfilFisicoController {
     public List<PerfilFisico> obtenerPerfilFisico() {
 
         return perfilFisicoService.obtenerPerfilFisico();
+    }
+
+    @GetMapping("/query")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    public List<UsuariosPorGeneroDTO> usuariosPorGenero() {
+
+        return perfilFisicoService.usuariosPorGenero();
     }
 
     /*@PutMapping("/perfilFisico")

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface RegistroConsumoRepositorio extends JpaRepository<RegistroConsumo, Integer> {
-    /*
-    @Query("select new com.upc.stayinggood.DTOs.ConsumoCaloriasDTO(r.idPerfilfisico.id, sum(r.cantidad * r.alimento.calorias))  from RegistroConsumo r group by r.idPerfilfisico")
-    List<ConsumoCaloriasDTO> totalConsumo();*/
+    @Query("select new com.upc.stayinggood.DTOs.ConsumoCaloriasDTO(r.perfilfisico.id, sum(r.cantidad * r.alimento.calorias))  from RegistroConsumo r group by r.perfilfisico.id")
+    List<ConsumoCaloriasDTO> totalConsumo();
+
 }

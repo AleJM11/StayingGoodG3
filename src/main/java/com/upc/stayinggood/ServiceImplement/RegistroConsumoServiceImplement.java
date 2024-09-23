@@ -32,9 +32,10 @@ public class RegistroConsumoServiceImplement implements RegistroConsumoService {
         return null;
     }
 
-    /*
+
+
     @Override
     public List<ConsumoCaloriasDTO> totalConsumo() {
         return registroConsumoRepositorio.totalConsumo();
-    }*/
+    }
 }
