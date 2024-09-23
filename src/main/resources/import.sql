@@ -8,7 +8,7 @@ INSERT INTO user_roles (user_id, role_id) VALUES (1, 1); -- user1 with ROLE_USER
 INSERT INTO user_roles (user_id, role_id) VALUES (2, 2); -- admin with ROLE_ADMIN
 
 INSERT INTO GENERO(nombre_genero) VALUES ('masculino');
-INSERT INTO GENERO(nombre_genero) VALUES ('femenino');
+--INSERT INTO GENERO(nombre_genero) VALUES ('femenino');
 INSERT INTO TIPO_PORCION(nombre_porcion) VALUES('gramos');
 INSERT INTO TIPO_PORCION(nombre_porcion) VALUES('mililitros');
 INSERT INTO ACTIVIDAD_FISICA(descripcion, factor_actividad) VALUES ('sedentario',1.2);
