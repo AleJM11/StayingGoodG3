@@ -1,5 +1,6 @@
 package com.upc.stayinggood.ServiceImplement;
 
+import com.upc.stayinggood.DTOs.EstimarMacrosDTO;
 import com.upc.stayinggood.DTOs.PerfilesSinConsumoDTO;
 import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
@@ -33,6 +34,11 @@ public class PerfilFisicoServiceImplement implements PerfilFisicoService {
     @Override
     public List<PerfilesSinConsumoDTO> perfilesSinConsumo() {
         return perfilFisicoRepositorio.perfilesSinConsumo();
+    }
+
+    @Override
+    public List<EstimarMacrosDTO> estimarMacros() {
+        return perfilFisicoRepositorio.estimarMacros();
     }
 
     /*@Override

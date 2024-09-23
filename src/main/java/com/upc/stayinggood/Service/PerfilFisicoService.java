@@ -1,5 +1,6 @@
 package com.upc.stayinggood.Service;
 
+import com.upc.stayinggood.DTOs.EstimarMacrosDTO;
 import com.upc.stayinggood.DTOs.PerfilesSinConsumoDTO;
 import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
@@ -14,4 +15,6 @@ public interface PerfilFisicoService {
     public List<UsuariosPorGeneroDTO> usuariosPorGenero();
 
     public List<PerfilesSinConsumoDTO> perfilesSinConsumo();
+
+    public List<EstimarMacrosDTO> estimarMacros();
 }
