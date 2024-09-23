@@ -31,7 +31,4 @@ public class RegistroConsumo {
     @JoinColumn(name = "perfilfisico_id")
     private PerfilFisico perfilfisico;
 
-    /*@OneToMany(mappedBy = "idRegistro")
-    private Set<TotalConsumo> totalConsumos = new LinkedHashSet<>();*/
-
 }

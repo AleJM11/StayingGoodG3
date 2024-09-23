@@ -1,6 +1,5 @@
 package com.upc.stayinggood.Controller;
 
-import com.upc.stayinggood.DTOs.UsuarioDTO;
 import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;

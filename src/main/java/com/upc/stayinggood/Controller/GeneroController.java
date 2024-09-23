@@ -1,9 +1,7 @@
 package com.upc.stayinggood.Controller;
 
 import com.upc.stayinggood.Entities.Genero;
-import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.GeneroService;
-import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

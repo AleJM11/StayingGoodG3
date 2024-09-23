@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -29,6 +26,4 @@ public class Alimento {
     @JoinColumn(name = "id_nombre_porcion")
     private TipoPorcion tipoPorcion;
 
-    //@OneToMany(mappedBy = "alimento")
-    //private Set<RegistroConsumo> registroConsumos = new LinkedHashSet<>();
 }

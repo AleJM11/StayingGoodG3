@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -26,8 +23,5 @@ public class ActividadFisica {
 
     @Column(name = "factor_actividad", nullable = false)
     private Double factorActividad;
-
-    //@OneToMany(mappedBy = "idActividadfisica")
-    //private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();
 
 }

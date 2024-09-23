@@ -2,10 +2,8 @@ package com.upc.stayinggood.Controller;
 
 import com.upc.stayinggood.DTOs.TipoPorcionDTO;
 import com.upc.stayinggood.Entities.TipoPorcion;
-import com.upc.stayinggood.Entities.Usuario;
 import com.upc.stayinggood.Service.TipoPorcionService;
 import org.modelmapper.ModelMapper;
-import com.upc.stayinggood.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

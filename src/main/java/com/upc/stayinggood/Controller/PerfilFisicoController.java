@@ -3,8 +3,6 @@ package com.upc.stayinggood.Controller;
 import com.upc.stayinggood.DTOs.PerfilesSinConsumoDTO;
 import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
-import com.upc.stayinggood.Entities.Usuario;
-import com.upc.stayinggood.Service.ActividadFisicaService;
 import com.upc.stayinggood.Service.PerfilFisicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

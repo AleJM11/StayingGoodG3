@@ -2,7 +2,6 @@ package com.upc.stayinggood.Controller;
 
 import com.upc.stayinggood.DTOs.AlimentoDTO;
 import com.upc.stayinggood.Entities.Alimento;
-import com.upc.stayinggood.Entities.Genero;
 import com.upc.stayinggood.Service.AlimentoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

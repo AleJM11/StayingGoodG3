@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -33,23 +31,15 @@ public class PerfilFisico {
     @ManyToOne
     @JoinColumn(name = "id_nombre")
     private Usuario usuario;
-    //private Usuario idUsuario;
 
     @ManyToOne
     @JoinColumn(name = "id_descripcion")
     private ActividadFisica actividadFisica;
-    //private ActividadFisica idActividadfisica;
 
     //@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @ManyToOne
     @JoinColumn(name = "id_nombre_genero")
     private Genero genero;
-    //private Genero idGenero;
 
-    //@OneToMany(mappedBy = "idPerfilfisico")
-    //private Set<CalculoMacro> calculoMacros = new LinkedHashSet<>();
-
-    //@OneToMany(mappedBy = "idPerfilfisico")
-    //private Set<RegistroConsumo> registroConsumos = new LinkedHashSet<>();
 
 }

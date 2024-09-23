@@ -25,8 +25,6 @@ public class Usuario {
     @Column(nullable = false, unique = true)
     private String username;
 
-    /*@Column(name = "email", nullable = false, length = Integer.MAX_VALUE)
-    private String email;*/
 
     @Column(nullable = false)
     private String password;
@@ -39,6 +37,4 @@ public class Usuario {
     )
     private Set<Role> roles = new HashSet<>();
 
-    /*@OneToMany(mappedBy = "usuario")
-    private Set<PerfilFisico> perfilFisicos = new LinkedHashSet<>();*/
 }

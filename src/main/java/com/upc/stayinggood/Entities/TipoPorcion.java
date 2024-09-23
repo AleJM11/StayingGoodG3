@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -24,10 +21,6 @@ public class TipoPorcion {
             length = Integer.MAX_VALUE)
     private String nombrePorcion;
 
-
-    /*@OneToMany(mappedBy = "idNombrePorcion")
-    private Set<Alimento> alimentos = new LinkedHashSet<>();
-    */
 }
 
 

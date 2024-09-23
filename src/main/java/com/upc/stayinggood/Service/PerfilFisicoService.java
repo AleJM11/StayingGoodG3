@@ -3,7 +3,6 @@ package com.upc.stayinggood.Service;
 import com.upc.stayinggood.DTOs.PerfilesSinConsumoDTO;
 import com.upc.stayinggood.DTOs.UsuariosPorGeneroDTO;
 import com.upc.stayinggood.Entities.PerfilFisico;
-import com.upc.stayinggood.Entities.Usuario;
 
 import java.util.List;
 

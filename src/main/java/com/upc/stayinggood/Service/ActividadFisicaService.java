@@ -1,7 +1,6 @@
 package com.upc.stayinggood.Service;
 
 import com.upc.stayinggood.Entities.ActividadFisica;
-import com.upc.stayinggood.Entities.TipoPorcion;
 
 import java.util.List;
 
