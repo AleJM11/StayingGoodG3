@@ -24,7 +24,10 @@ public class TipoPorcion {
             length = Integer.MAX_VALUE)
     private String nombrePorcion;
 
-    //@OneToMany(mappedBy = "idNombrePorcion")
-    //private Set<Alimento> alimentos = new LinkedHashSet<>();
+
+    /*@OneToMany(mappedBy = "idNombrePorcion")
+    private Set<Alimento> alimentos = new LinkedHashSet<>();
+    */
 }
+
 
