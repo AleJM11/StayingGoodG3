@@ -11,11 +11,5 @@ import java.util.List;
 
 @Repository
 public interface AlimentoRepositorio extends JpaRepository<Alimento, Integer> {
-    /*@Query("select new com.upc.stayinggood.DTOs.AlimentosPorCaloriasDTO(nombre, calorias) from Alimento group by calorias ")
-    List<AlimentosPorCaloriasDTO> findAllByCaloriasOrderByCaloriasDesc();*/
 
-    /*
-    SELECT * FROM Alimentos
-    ORDER BY calorias DESC;
-    */
 }
