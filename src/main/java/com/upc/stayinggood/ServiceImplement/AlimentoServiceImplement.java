@@ -17,9 +17,14 @@ public class AlimentoServiceImplement implements AlimentoService {
         return alimentoRepositorio.findAll();
     }
 
-    @Override
+    /*@Override
     public void insertarAlimento(Alimento alimento) {
         alimentoRepositorio.save(alimento);
+    }*/
+
+    @Override
+    public Alimento insertarAlimento(Alimento alimento) {
+        return alimentoRepositorio.save(alimento);
     }
 
     @Override

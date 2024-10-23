@@ -26,7 +26,6 @@ public class PerfilFisicoController {
     @GetMapping("/perfilFisico")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public List<PerfilFisico> obtenerPerfilFisico() {
-
         return perfilFisicoService.obtenerPerfilFisico();
     }
 
